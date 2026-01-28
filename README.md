@@ -21,14 +21,8 @@ Script en powershell que genera un csv y recopila la siguiente informacion del e
 - Impresoras
 - Fecha datos
 
-Windows necesita tener firmado el .ps1 para poder ejecutarlo en powershell, para hacer una prueba rapida se puede desactivar la directiva con este comando:
+Windows necesita tener firmado el .ps1 para poder ejecutarlo en powershell, para hacer una prueba rapida se puede desactivar temporalmente la directiva con este comando en administrador:
 
 ```powershell
-Set-ExecutionPolicy Unrestricted
-```
-
-Para activar de nuevo la restricción: 
-
-```powershell
-Set-ExecutionPolicy RemoteSigned
+powershell -ExecutionPolicy Bypass -File .\Get-InfoPC.ps1
 ```
